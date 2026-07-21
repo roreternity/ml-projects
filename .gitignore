@@ -1,0 +1,25 @@
+# OS
+.DS_Store
+
+# Editor / local tool settings
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+
+# Datasets (Kaggle competition data — download separately, don't redistribute)
+*.csv
+
+# Dogs vs Cats images
+Dogs_Cats/train/
+Dogs_Cats/test/
+Dogs_Cats/test1/
+
+# Model weights
+**/weights/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
