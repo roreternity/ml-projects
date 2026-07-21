@@ -1,47 +1,58 @@
-# ML Portfolio — Kaggle & University Practice
+# ML Portfolio — Kaggle и университетская практика
 
-A collection of machine learning projects covering classification, regression, computer vision, NLP, time series forecasting, web scraping, and LLM fine-tuning.
+Коллекция проектов по машинному обучению: классификация, регрессия, компьютерное зрение, NLP, прогнозирование временных рядов, веб-скрапинг и дообучение LLM.
 
-Each project folder has a `README.md` with the task description and a `*_notebook.ipynb` with a full Russian-language walkthrough (code and output stay in English).
+В каждой папке проекта — свой `README.md` с описанием задачи и `*_notebook.ipynb` с полным разбором на русском языке (код и вывод — на английском).
 
 ---
 
-## Projects
+## Проекты
 
-### Kaggle Competitions
+### Соревнования Kaggle
 
-| Project | Task | Model | Result |
+| Проект | Задача | Модель | Результат на Kaggle |
 |---|---|---|---|
-| [Titanic](./Titanic/) | Binary classification — survival prediction | Random Forest | ~79% accuracy |
-| [House Prices](./House_Prices/) | Regression — sale price prediction | XGBoost | MAE ~$16,500 |
-| [Spaceship Titanic](./Spaceship/) | Binary classification — categorical features | CatBoost | — |
-| [Digit Recognizer](./Digit_Recognizer/) | Image classification (MNIST) | CNN (PyTorch) | — |
-| [Dogs vs Cats](./Dogs_Cats/) | Binary image classification | CNN (PyTorch) | — |
-| [Stellar Object Classification](./Stellar_Class/) | Multi-class classification (SDSS) | Random Forest | — |
-| [Student Health Classification](./Student_Health/) | Multi-class, imbalanced classes | Random Forest | — |
+| [Titanic](./Titanic/) | Бинарная классификация — предсказание выживания | Random Forest | 0.77990 (accuracy) |
+| [House Prices](./House_Prices/) | Регрессия — предсказание цены дома | XGBoost | 0.13786 (RMSE, log scale) |
+| [Spaceship Titanic](./Spaceship/) | Бинарная классификация с категориальными признаками | CatBoost | 0.79822 (accuracy) |
+| [Digit Recognizer](./Digit_Recognizer/) | Классификация изображений (MNIST) | CNN (PyTorch) | 0.98225 (accuracy) |
+| [Dogs vs Cats](./Dogs_Cats/) | Бинарная классификация изображений | CNN (PyTorch) | 6.94102 (log loss) |
+| [Stellar Object Classification](./Stellar_Class/) | Многоклассовая классификация (SDSS) | Random Forest | 0.94275 (public) |
+| [Student Health Classification](./Student_Health/) | Многоклассовая классификация, несбалансированные классы | Random Forest | 0.85819 (public) |
 
-### University Practice
+### Университетская практика
 
-| Project | Task | Method | Result |
+| Проект | Задача | Метод | Результат |
 |---|---|---|---|
-| [Guardian Data Collection](./News_Parser/) | Web data collection via API | Guardian Content API | 5,000 articles, 12 features |
-| [Support Ticket Classifier](./Ticket_Classifier/) | Multi-class text classification | TF-IDF + LinearSVC | 86.79% accuracy (8 classes) |
-| [Time Series Forecasting](./Energy_Forecasting/) | Multi-series forecasting (61 series, 36 months) | Seasonal mean-delta | SMAPE 18.35% vs 21.64% baseline |
-| [Least Squares & Linear Regression](./Study/) | Curve fitting, regression fundamentals | numpy / sklearn / scipy | — |
+| [Guardian Data Collection](./News_Parser/) | Сбор данных из веб-источников через API | Guardian Content API | 5000 статей, 12 признаков |
+| [Support Ticket Classifier](./Ticket_Classifier/) | Многоклассовая классификация текста | TF-IDF + LinearSVC | 86.79% accuracy (8 классов) |
+| [Time Series Forecasting](./Energy_Forecasting/) | Прогноз по 61 временному ряду на 36 месяцев | Сезонный mean-delta | SMAPE 18.35% против 21.64% baseline |
+| [Least Squares & Linear Regression](./Studying/) | Аппроксимация кривых, основы регрессии | numpy / sklearn / scipy | — |
 
-### Other
+### Другое
 
-| Project | Description |
+| Проект | Описание |
 |---|---|
-| [DojoTask](./DojoTask/) | EN→RU translation with Gemma + QLoRA fine-tuning |
-| [MII](./MII/) | Web scraping scripts (HH.ru vacancies, Wildberries products) |
+| [DojoTask](./DojoTask/) | Перевод EN→RU: дообучение Gemma методом QLoRA |
+| [MII](./MII/) | Скрипты веб-скрапинга (вакансии HH.ru, товары Wildberries) |
+| [SHAD_Handbook](./SHAD_Handbook/) | Материалы курса по машинному обучению |
 
 ---
 
-## Data
+## Другие репозитории портфолио
 
-Datasets and generated CSV outputs are excluded from this repository via `.gitignore` (Kaggle competition data shouldn't be redistributed, and large files don't belong in git). Each project's notebook expects the corresponding Kaggle dataset in `/kaggle/input/...` when run on Kaggle, or the raw CSVs placed next to the script when run locally.
+| Репозиторий | Описание |
+|---|---|
+| [Yandex ML Cup](https://github.com/roreternity/yandex_ml_cup) | Решения трёх треков Yandex ML Cup: адаптивный решатель головоломок, синтез новых ракурсов по видео, LLM для ответов на школьные вопросы |
+| [Yandex SAR 2026](https://github.com/roreternity/yandex-sar-2026) | Задачи Yandex SAR: A/B-тестирование, дешифровка, деревья решений и др. |
+| [StoRM (Team Risk Optimizer)](https://github.com/roreternity/team-risk-optimizer) | Проект по анализу и оптимизации рисков в команде |
 
-## Stack
+---
+
+## Данные
+
+Каждый ноутбук ожидает соответствующий датасет Kaggle в `/kaggle/input/...` при запуске на Kaggle, либо CSV-файлы рядом со скриптом при локальном запуске.
+
+## Стек
 
 Python · pandas · scikit-learn · XGBoost · CatBoost · PyTorch · NumPy
